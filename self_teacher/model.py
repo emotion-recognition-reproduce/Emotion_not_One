@@ -18,7 +18,7 @@ class ERC_model(nn.Module):
         self.last = last
         
         """Model Setting"""        
-        model_path = '/data/project/rw/rung/model/'+model_type
+        model_path = os.path.expanduser('~/models/huggingface/')+model_type
 #         model_path = model_type
         if model_type == 'roberta-large':
             self.model = RobertaModel.from_pretrained(model_path)
